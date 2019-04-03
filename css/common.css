@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+html, body {height:100%;}
+#wrapper {height:100%;}
+
+/* 공통 */
+.dn {display:none;}
+.hidden {opacity:0;}
+
+/* 메인 */
+.content {width:100%; height:100%;}
+
+.main {
+    position:relative;
+    width:100%;
+    height:100%;
+    background:url("../img/bg_main.jpg") no-repeat center center;
+    background-size:cover;
+}
+.main::before {
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:1;
+}
+.typing {
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    margin:0 auto;
+    z-index:2;
+}
+.typing #text {color:#fff; font-size:5em; font-weight:600;}
+.typing .underbar {display:inline-block; color:#ca3926; font-size:5em; font-weight:600;}
+.click_down {
+    display:none !important;
+    position:absolute;
+    left:50%;
+    bottom:30px;
+    display:inline-block;
+    width:64px;
+    height:64px;
+    margin:0 0 0 -32px;
+    text-indent:-9999px;
+    background:url("../img/ico_click.png") no-repeat left top;
+    z-index:2;
+    cursor:pointer;
+    transform: rotate(-180deg);
+}
+
+/* tablet */
+@media only screen and (min-width : 500px) and (max-width : 1320px) {
+    
+}
+
+/* mobile */
+@media only screen and (min-width : 0px) and (max-width : 500px) {
+    
+}
