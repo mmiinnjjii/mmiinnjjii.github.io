@@ -1,0 +1,44 @@
+<script>
+    $(function(){
+        $('.spring').each(function(i, e){
+            var $uxPaging = $(e).find('.page');
+            var $uxCur = $(e).find('.cur');
+            var $uxTotal = $(e).find('.total');
+            var $uxBtn = $(e).find('.btn');
+            var $uxBtnNext = $(e).find('.next');
+            var $uxBtnPrev = $(e).find('.prev');
+            var $uxLst = $(e).find('.glist');
+            var $uxLstItem = $(e).find('.glist figure');
+
+            var uxcur = 0;
+            var uxlen = 4;
+            var uxpage = Math.ceil($uxLstItem.length / uxlen);
+            $uxTotal.text(uxpage);
+
+            uxSlice(uxcur);
+            function uxSlice(uxcur){
+                var uxidx = uxcur * uxlen;
+                $uxCur.text(uxcur+1);
+                $uxLstItem.hide().slice(uxidx, uxidx+uxlen).show();
+            }
+            $uxBtnNext.on('click', function(){
+                uxcur ++;
+                uxSlice(uxcur);
+                if(uxcur >= uxpage){
+                    uxcur = 0;
+                    uxSlice(uxcur);
+                }
+                return false;
+            });
+            $uxBtnPrev.on('click', function(){
+                uxcur --;
+                uxSlice(uxcur);
+                if(uxcur < 0){
+                    uxcur = uxpage-1;
+                    uxSlice(uxcur);
+                }
+                return false;
+            });
+        });
+    });
+</script>

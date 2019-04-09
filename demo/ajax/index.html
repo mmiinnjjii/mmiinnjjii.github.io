@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>맘스맘 ajax 슬라이드</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script>
+$(function(){
+	$(window).on('load',function(){
+		$.ajax({
+			url:'ajax.html',
+			dataType:"html",
+			success:function(data){
+				$('#main').html(data);
+			},
+			error:function(data){
+				$('#main').text('데이터를 가져오는데 실패하였습니다.');
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+<main id="main"></main>
+</body>
+</html>

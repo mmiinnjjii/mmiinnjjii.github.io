@@ -1,0 +1,168 @@
+/* Reset */
+*{margin:0;padding:0;border:0;font-size:13px;line-height:1;list-style:none;font-weight:normal;font-style:normal;font-family:'Malgun Gothic','맑은 고딕',Dotum,'돋움',Arial, Verdana, sans-serif;box-sizing:border-box;}
+html,body{
+	height:100%;
+}
+body{
+	background-color:#e6f4f8;
+}
+a{text-decoration:none;}
+
+.spring{
+	position:relative;
+	width:1000px;
+	margin:20px auto;
+}
+.spring h2{
+	margin-bottom:10px;
+	padding:20px 0;
+	border-bottom:2px solid #222;
+	font-size:16px;
+}
+.spring h2 strong{
+	color:#0096ff;
+	font-size:20px;
+	font-weight:bold;
+}
+/* 컨트롤 */
+.control{
+	position:absolute;
+	top:24px;
+	right:0;
+}
+.control *{
+	vertical-align:middle;
+}
+.control .page{
+	display:inline-block;
+	margin-right:10px;
+	font-size:15px;
+}
+.control .page .cur{
+	display:inline-block;
+	position:relative;
+	top:-1px;
+	font-size:inherit;
+}
+.control .page .total{
+	display:inline-block;
+	position:relative;
+	top:-1px;
+	font-size:inherit;
+	font-weight:bold;
+}
+.control .btn{
+	display:inline-block;
+}
+.control .btn .prev{
+	display:inline-block;
+	width:22px;
+	height:22px;
+}
+.control .btn .next{
+	display:inline-block;
+	width:22px;
+	height:22px;
+}
+/* 갤러리 리스트 */
+.glist{
+	overflow:hidden;
+	width:100%;
+}
+.glist::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.glist figure{
+	float:left;
+	width:241px;
+	height:338px;
+	margin-bottom:12px;
+	margin-left:12px;
+	border:1px solid #e4e4e6;
+}
+.glist figure:nth-child(4n+1){
+	clear:both;
+	margin-left:0;
+}
+.glist .imgbox{
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	height:239px;
+	line-height:239px;
+	text-align:center;
+}
+.glist .imgbox img{
+	max-width:239px;
+	max-height:239px;
+	background-color:#fff;
+}
+.glist .imgbox .badge{
+	display:inline-block;
+	position:absolute;
+	top:10px;
+	left:10px;
+	z-index:2;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	background-color:palevioletred;
+	color:#fff;
+	font-weight:700;
+	font-size:13px;
+	line-height:60px;
+	text-align:center;
+}
+.glist figcaption{
+	padding:10px;
+	border-top:1px solid #e4e4d6;
+	background-color:#f9f9fb;
+}
+.glist .subject{
+	margin-bottom:15px;
+	font-size:14px;
+	color:#222;
+	line-height:18px;
+}
+.glist .price{
+	position:relative;
+	font-family: 'Montserrat';
+}
+.glist .price *::after{
+	color:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+.glist .price strong{
+	font-size:25px;
+	color:#e73c50;
+}
+.glist .price strong::after{
+	content:"%";
+}
+.glist .price ins{
+	position:absolute;
+	bottom:3px;
+	right:0;
+	font-size:18px;
+	color:#000;
+	font-weight:700;
+	text-decoration:none;
+}
+.glist .price ins::after{
+	content:"원";
+	font-size:13px;
+	font-weight:400;
+}
+.glist .price del{
+	position:absolute;
+	top:-10px;
+	right:0;
+	font-size:12px;
+	color:#808080;
+}
+.glist .price del::after{
+	content:"원";
+}
