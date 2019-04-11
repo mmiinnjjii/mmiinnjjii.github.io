@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>맘스맘 ajax 슬라이드</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<section class="spring">
+	<h2><strong>Coming Spring</strong> | 따뜻한 봄이 오나 봄</h2>
+	<div class="control">
+		<div class="page">
+			<i class="cur"></i> / <b class="total"></b>
+		</div>
+		<div class="btn">
+			<a href="#" class="prev"><img src="image/mj_btn_prev.png" alt="이전페이지"></a>
+			<a href="#" class="next"><img src="image/mj_btn_next.png" alt="다음페이지"></a>
+		</div>
+	</div>
+	<div class="glist">
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring01.jpg" alt="">
+				<span class="badge">SALE</span>
+			</div>
+			<figcaption>
+				<p class="subject">[봄특가] 타티네쇼콜라) BHOG드림블루우주 (TN6MQX13U)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>59,000</del>
+					<ins>17,700</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring02.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[봄특가] 타티네쇼콜라) GL티라바디수트 (TN6MBO045)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>50,000</del>
+					<ins>17,700</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring03.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[봄특가] 타티네쇼콜라) GP팝아일렛우주P (TN6MQA132)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>119,000</del>
+					<ins>35,700</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring04.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[봄특가] 타티네쇼콜라) BC크루즈TS (TT6MTS062)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>49,000</del>
+					<ins>14,700</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring05.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">타티네쇼콜라) UH선염슬림상하_민트 (TN5MXS399M)</p>
+				<p class="price">
+					<strong>81</strong>
+					<del>29,900</del>
+					<ins>5,800</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring06.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[봄특가] 타티네쇼콜라) BC페레요꼬티 (TT5MTS094)</p>
+				<p class="price">
+					<strong>80</strong>
+					<del>55,000</del>
+					<ins>11,000</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring07.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">타티네쇼콜라) UO익스고슴7내의B (TN7MXS659)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>119,000</del>
+					<ins>35,700</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring08.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[매장배송] 타티네쇼콜라) BA블루걸음마샌들</p>
+				<p class="price">
+					<strong>80</strong>
+					<del>65,000</del>
+					<ins>13,000</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring09.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">타티네쇼콜라) UM마티니ST양말 (TT7MSC111)</p>
+				<p class="price">
+					<strong>40</strong>
+					<del>7,000</del>
+					<ins>4,200</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring10.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[봄특가] 타티네쇼콜라) B페레고슴상하 (TN5MXT339)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>59,900</del>
+					<ins>11,980</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring11.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[특가] 타티네쇼콜라) GR로즈앤틱상하 (TN6SXT061)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>90,000</del>
+					<ins>29,700</ins>
+				</p>
+			</figcaption>
+		</figure>
+		<figure>
+			<div class="imgbox">
+				<img src="image/mj_img_spring12.jpg" alt="">
+			</div>
+			<figcaption>
+				<p class="subject">[특가] 타티네쇼콜라) BM매칭멜빵상하 (TN6SXT071)</p>
+				<p class="price">
+					<strong>70</strong>
+					<del>119,000</del>
+					<ins>35,700</ins>
+				</p>
+			</figcaption>
+		</figure>
+	</div>
+	<!-- //.glist -->
+</section>
+<!-- //.spring -->
+<script>
+    $(function(){
+        $('.spring').each(function(i, e){
+			var $mjCur = $(e).find('.cur');
+			var $mjTot = $(e).find('.total');
+			var $mjBtnNext = $(e).find('.next');
+			var $mjBtnPrev = $(e).find('.prev');
+			var $mjLst = $(e).find('.glist');
+			var $mjLstItem = $(e).find('.glist figure');
+
+			var mjcur = 0;
+			var mjlen = 4;
+			var mjpage = Math.ceil($mjLstItem.length / mjlen);
+			$mjTot.text(mjpage);
+
+			mjSlice(mjcur);
+			function mjSlice(mjcur){
+				var mjidx = mjcur * mjlen;
+				$mjCur.text(mjcur+1);
+				$mjLstItem.hide().slice(mjidx, mjidx+mjlen).show();
+			}
+
+			$mjBtnNext.on('click', function(){
+				mjcur ++;
+				mjSlice(mjcur);
+				if(mjcur >= mjpage){
+					mjcur = 0;
+					mjSlice(mjcur);
+				}
+				return false;
+			});
+
+			$mjBtnPrev.on('click', function(){
+				mjcur --;
+				mjSlice(mjcur);
+				if(mjcur < 0){
+					mjcur = mjpage-1;
+					mjSlice(mjcur);
+				}
+				return false;
+			});
+		});
+    });
+</script>
+</body>
+</html>
