@@ -1,40 +1,40 @@
-$(function() {
+$(function(){
 	$('.spring').each(function(i, e){
-		let $uxPaging = $(e).find('.page');
-		let $uxCur = $(e).find('.cur');
-		let $uxTotal = $(e).find('.total');
-		let $uxBtn = $(e).find('.btn');
-		let $uxBtnNext = $(e).find('.next');
-		let $uxBtnPrev = $(e).find('.prev');
-		let $uxLst = $(e).find('.glist');
-		let $uxLstItem = $(e).find('.glist figure');
+		var $mjCur = $(e).find('.cur');
+		var $mjTot = $(e).find('.total');
+		var $mjBtnNext = $(e).find('.next');
+		var $mjBtnPrev = $(e).find('.prev');
+		var $mjLst = $(e).find('.glist');
+		var $mjLstItem = $(e).find('.glist figure');
 
-		let uxcur = 0;
-		let uxlen = 4;
-		let uxpage = Math.ceil($uxLstItem.length / uxlen);
-		$uxTotal.text(uxpage);
+		var mjcur = 0;
+		var mjlen = 4;
+		var mjpage = Math.ceil($mjLstItem.length / mjlen);
+		$mjTot.text(mjpage);
 
-		uxSlice(uxcur);
-		function uxSlice(uxcur){
-			let uxidx = uxcur * uxlen;
-			$uxCur.text(uxcur+1);
-			$uxLstItem.hide().slice(uxidx, uxidx+uxlen).show();
+		mjSlice(mjcur);
+		function mjSlice(mjcur){
+			var mjidx = mjcur * mjlen;
+			$mjCur.text(mjcur+1);
+			$mjLstItem.hide().slice(mjidx, mjidx+mjlen).show();
 		}
-		$uxBtnNext.on('click', function(){
-			uxcur ++;
-			uxSlice(uxcur);
-			if(uxcur >= uxpage){
-				uxcur = 0;
-				uxSlice(uxcur);
+
+		$mjBtnNext.on('click', function(){
+			mjcur ++;
+			mjSlice(mjcur);
+			if(mjcur >= mjpage){
+				mjcur = 0;
+				mjSlice(mjcur);
 			}
 			return false;
 		});
-		$uxBtnPrev.on('click', function(){
-			uxcur --;
-			uxSlice(uxcur);
-			if(uxcur < 0){
-				uxcur = uxpage-1;
-				uxSlice(uxcur);
+
+		$mjBtnPrev.on('click', function(){
+			mjcur --;
+			mjSlice(mjcur);
+			if(mjcur < 0){
+				mjcur = mjpage-1;
+				mjSlice(mjcur);
 			}
 			return false;
 		});
